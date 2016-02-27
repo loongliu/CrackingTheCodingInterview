@@ -2,7 +2,14 @@ package cracking._02_linkedlist;
 
 public class _02_03_DeleteCurrent {
 
-	public static boolean deleteCurrent(Node cur){
+	/**
+	 * delete the current node in a linked list.
+	 * assume you can only visit this node
+	 * this can not delete the last node
+	 * @param cur the current node
+	 * @return
+	 */
+	public static <T> boolean deleteCurrent(Node<T> cur){
 		if(cur==null || cur.next==null){
 			return false;
 		}
@@ -12,10 +19,9 @@ public class _02_03_DeleteCurrent {
 	}
 	
 	public static void main(String[] args) {
-		Node n = Node.fromArray(new int[]{1,2,3});
+		Node<Integer> n = Node.fromArray(new Integer[]{1,2,3});
 		System.out.println(n);
-		deleteCurrent(n.next.next);
+		deleteCurrent(n.next);
 		System.out.println(n);
 	}
-
 }

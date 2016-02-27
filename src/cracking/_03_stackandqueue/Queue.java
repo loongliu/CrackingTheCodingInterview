@@ -2,29 +2,29 @@ package cracking._03_stackandqueue;
 
 import cracking._02_linkedlist.Node;
 
-public class Queue {
-	Node head;
-	Node tail;
+public class Queue<T> {
+	Node<T> head;
+	Node<T> tail;
 	public Queue(){	}
-	public Queue(int... args){
-		head = Node.fromAray(args);
+	public Queue(T[] args){
+		head = Node.fromArray(args);
 		tail = head.getLast();
 	}
-	public void enqueue(int val){
+	public void enqueue(T val){
 		if(head==null){
-			head = new Node(val);
+			head = new Node<T>(val);
 			tail = head;
 		}else{
-			tail.next = new Node(val);
+			tail.next = new Node<T>(val);
 			tail = tail.next;
 		}
 	}
 	
-	public int dequeue(){
+	public T dequeue(){
 		if(head == null){
-			return Integer.MIN_VALUE;
+			return null;
 		}
-		int value = head.val;
+		T value = head.val;
 		head = head.next;
 		return value;
 	}

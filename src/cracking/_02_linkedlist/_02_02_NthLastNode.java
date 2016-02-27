@@ -2,8 +2,8 @@ package cracking._02_linkedlist;
 
 public class _02_02_NthLastNode {
 	
-	public static Node nthLastNode(Node head, int n){
-		Node fir = head, sec = head;
+	public static <T> Node<T> nthLastNode(Node<T> head, int n){
+		Node<T> fir = head, sec = head;
 		for(int k = n; k>=0; k--){
 			if(fir==null){
 				return null;
@@ -18,7 +18,7 @@ public class _02_02_NthLastNode {
 	}
 
 	public static void main(String[] args) {
-		Node head = Node.fromArray(new int[]{1,2,3,4,5});
+		Node<Integer> head = Node.fromArray(new Integer[]{1,2,3,4,5});
 		System.out.println(nthLastNode(head,1).val);
 	}
 

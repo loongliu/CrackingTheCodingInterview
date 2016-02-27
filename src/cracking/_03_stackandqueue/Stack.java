@@ -2,41 +2,46 @@ package cracking._03_stackandqueue;
 
 import cracking._02_linkedlist.Node;
 
-public class Stack {
-	Node top;
+public class Stack<T> {
+	Node<T> top;
 	
-	int pop(){
+	T pop(){
 		if(top == null){
-			return Integer.MIN_VALUE;
+			return null;
 		}
-		int item = top.val;
+		T item = top.val;
 		top = top.next;
 		return item;
 	}
-	int peek(){
+	T peek(){
 		if(top == null){
-			return Integer.MIN_VALUE;
+			return null;
 		}
 		return top.val;
 	}
-	void push(int val){
-		Node n = new Node(val);
+	void push(T val){
+		Node<T> n = new Node<T>(val);
 		n.next = top;
 		top = n;
 	}
+	public int length(){
+		if(top == null) return 0;
+		return top.length();
+	}
 	
 	public String toString(){
-		return top.toString();
+		return top!=null ? top.toString() : "null";
 	}
 	
 	public Stack(){
 	}
-	public Stack(int...arg){
-		top = Node.fromAray(arg);
+	public Stack(T[] arg){
+		top = Node.fromArray(arg);
 	}
 	
 	public static void main(String[] args){
-		Stack s = new Stack(1,2,3,4);
+		Integer[] array = new Integer[]{1,2,3,4};
+		Stack<Integer> s = new Stack<>(array);
 		System.out.println(s);
 		s.pop();
 		System.out.println(s);
