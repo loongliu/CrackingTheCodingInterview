@@ -42,7 +42,16 @@ public class Node<T> {
 			return 1+ next.length();
 		}
 	}
-	
+
+	public String toString(String deli){
+		StringBuilder stb = new StringBuilder();
+		stb.append('[').append(this.val);
+		for(Node<T> cur = this.next; cur!=null; cur = cur.next){
+			stb.append("\n").append(cur.val);
+		}
+		stb.append(']');
+		return stb.toString();
+	}
 	
 	@Override
 	public String toString(){

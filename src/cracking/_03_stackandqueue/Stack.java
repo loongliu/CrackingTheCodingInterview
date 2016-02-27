@@ -13,6 +13,7 @@ public class Stack<T> {
 		top = top.next;
 		return item;
 	}
+	
 	T peek(){
 		if(top == null){
 			return null;
@@ -31,6 +32,9 @@ public class Stack<T> {
 	
 	public String toString(){
 		return top!=null ? top.toString() : "null";
+	}
+	public String toString(String deli){
+		return top!=null ? top.toString(deli) : "null";
 	}
 	
 	public Stack(){
