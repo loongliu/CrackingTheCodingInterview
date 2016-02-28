@@ -19,6 +19,9 @@ public class Queue<T> {
 			tail = tail.next;
 		}
 	}
+	public String toString(){
+		return head!=null ? head.toString() : "null";
+	}
 	
 	public T dequeue(){
 		if(head == null){
@@ -27,5 +30,9 @@ public class Queue<T> {
 		T value = head.val;
 		head = head.next;
 		return value;
+	}
+	
+	public T check(){
+		return head.val;
 	}
 }

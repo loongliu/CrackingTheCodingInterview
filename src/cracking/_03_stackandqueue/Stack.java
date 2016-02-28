@@ -20,6 +20,10 @@ public class Stack<T> {
 		}
 		return top.val;
 	}
+	
+	boolean isEmpty(){
+		return top==null;
+	}
 	void push(T val){
 		Node<T> n = new Node<T>(val);
 		n.next = top;
@@ -35,6 +39,11 @@ public class Stack<T> {
 	}
 	public String toString(String deli){
 		return top!=null ? top.toString(deli) : "null";
+	}
+	public String reverseString(){
+		return top!=null ? top.reverseString() : "null";
+		
+		
 	}
 	
 	public Stack(){

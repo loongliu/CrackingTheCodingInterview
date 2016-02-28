@@ -53,6 +53,16 @@ public class Node<T> {
 		return stb.toString();
 	}
 	
+	public String reverseString(){
+		StringBuilder stb = new StringBuilder();
+		stb.insert(0,']').insert(0,this.val);
+		for(Node<T> cur = this.next; cur!=null; cur = cur.next){
+			stb.insert(0," <- ").insert(0,cur.val);
+		}
+		stb.insert(0,'[');
+		return stb.toString();
+	}
+	
 	@Override
 	public String toString(){
 		StringBuilder stb = new StringBuilder();
