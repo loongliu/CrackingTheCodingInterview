@@ -5,11 +5,9 @@ import java.util.List;
 
 public class DirectedGraphNode<T> {
 	T val;
-	boolean marked;
 	List<DirectedGraphNode<T>> edges;
 	DirectedGraphNode(T val){
 		this.val = val;
-		marked = false;
 		edges = new ArrayList<>();
 	}
 
