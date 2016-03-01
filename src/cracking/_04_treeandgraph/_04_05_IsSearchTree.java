@@ -1,14 +1,16 @@
 package cracking._04_treeandgraph;
 
-public class _04_05_IsSearchTree {
-	static class Info{
-		boolean s;
-		Integer min;
-		Integer max;
-		Info(boolean s, Integer i, Integer m){
-			this.s = s; min = i; max = m;
-		}
+
+class Info{
+	boolean s;
+	Integer min;
+	Integer max;
+	Info(boolean s, Integer i, Integer m){
+		this.s = s; min = i; max = m;
 	}
+}
+public class _04_05_IsSearchTree {
+	
 	/**
 	 * check whether a tree is a search tree.
 	 * @param node the root node of the tree
