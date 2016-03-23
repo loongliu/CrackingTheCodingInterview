@@ -36,6 +36,7 @@ public class _07_05_MaxPointOnALine {
     		this.k = k;
     		this.d = a.y-k*a.x;
     	}
+    	@Override
     	public String toString(){
     		StringBuilder sb = new StringBuilder();
     		if(isX){
