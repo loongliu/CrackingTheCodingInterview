@@ -5,7 +5,7 @@ import cracking._02_linkedlist.Node;
 public class Stack<T> {
 	Node<T> top;
 	
-	T pop(){
+	public T pop(){
 		if(top == null){
 			return null;
 		}
@@ -14,7 +14,7 @@ public class Stack<T> {
 		return item;
 	}
 	
-	T peek(){
+	public T peek(){
 		if(top == null){
 			return null;
 		}
@@ -24,7 +24,7 @@ public class Stack<T> {
 	boolean isEmpty(){
 		return top==null;
 	}
-	void push(T val){
+	public void push(T val){
 		Node<T> n = new Node<T>(val);
 		n.next = top;
 		top = n;

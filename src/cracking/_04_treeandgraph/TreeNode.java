@@ -3,10 +3,10 @@ package cracking._04_treeandgraph;
 import java.util.LinkedList;
 
 public class TreeNode<T> {
-	TreeNode<T> left;
-	TreeNode<T> right;
-	T val;
-	TreeNode(T val){
+	public TreeNode<T> left;
+	public TreeNode<T> right;
+	public T val;
+	public TreeNode(T val){
 		this.val = val;
 	}
 	
