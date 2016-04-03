@@ -1,11 +1,6 @@
 package coding;
 
-class Node{
-	int val;
-	Node next;
-	Node rand;
-	public Node(int v){val = v;}
-}
+
 
 public class _26_CopyComplexListNode {
 	
@@ -42,6 +37,12 @@ public class _26_CopyComplexListNode {
 
 	public static void main(String[] args) {
 		
+	}
+	private static class Node{
+		int val;
+		Node next;
+		Node rand;
+		public Node(int v){val = v;}
 	}
 
 }

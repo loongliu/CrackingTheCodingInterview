@@ -17,12 +17,12 @@ public class TreeNode<T> {
 		while(!list.isEmpty()){
 			TreeNode<T> node = list.removeFirst();
 			sb.append(node.val).append(" (");
-			if(node.left != null){
-				list.add(node.left);
-				sb.append(node.left.val).append(" ");
-			}else{
-				sb.append("null ");
-			}
+//			if(node.left != null){
+//				list.add(node.left);
+//				sb.append(node.left.val).append(" ");
+//			}else{
+//				sb.append("null ");
+//			}
 			if(node.right != null){
 				list.add(node.right);
 				sb.append(node.right.val).append(" ");
