@@ -63,6 +63,17 @@ public class Node<T> {
 		return stb.toString();
 	}
 	
+	public Node<T> clone(){
+		Node<T> head = new Node<T>(val);
+		Node<T> cur = head, oriCur = this;
+		while(oriCur.next!=null){
+			cur.next = new Node<>(oriCur.next.val);
+			cur = cur.next;
+			oriCur = oriCur.next;
+		}
+		return head;
+	}
+	
 	@Override
 	public String toString(){
 		StringBuilder stb = new StringBuilder();
